@@ -1,0 +1,1 @@
+{"id":"ff808181932badb601958603beb231d5","name":"Apple MacBook Pro 20","createdAt":"2025-03-11T16:22:27.250+00:00","data":{"year":2026,"price":2331.99,"CPU model":"Intel Core i7","Hard disk size":"2 TB"}}

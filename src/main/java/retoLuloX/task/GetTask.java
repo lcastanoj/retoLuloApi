@@ -7,22 +7,22 @@ import io.restassured.http.ContentType;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class GetEmployees implements Task {
+public class GetTask implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Get.resource("/employees")
+                Get.resource("/objects")
                         .with(request -> request
                                 .contentType(ContentType.JSON)
                                 .relaxedHTTPSValidation()
-                                .header("User-Agent", "Mozilla/5.0")  // Simula un navegador
-                                .header("Cookie", "humans_21909=1")   // Usa la cookie que pide la API
+                                .header("User-Agent", "Mozilla/5.0")
+                                .header("Cookie", "humans_21909=1")
                         )
         );
     }
 
-    public static GetEmployees fromApi() {
-        return instrumented(GetEmployees.class);
+    public static GetTask fromApi() {
+        return instrumented(GetTask.class);
     }
 }
